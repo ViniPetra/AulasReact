@@ -1,0 +1,30 @@
+[
+        {
+            "title": "A General Introduction to Data Analytics",
+            "year": 2018,
+            "genre": "Data Analytics",
+            "Author": "João Moreira, Andre Carvalho, Tomás Horvath",
+            "imagem": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9p6BfAElPW0-siUjNrFMKH_NXzsBRPrWDQ8wcVpfwcGlrSBnGSHCK1jndpYRmi7u3BYI&usqp=CAU"
+        },
+        {
+            "title": "Data Analytics: Concepts, Techniques, and Applications ",
+            "year": 2020,
+            "genre": "Data Analytics",
+            "Author": "Mohiuddin Ahmed",
+            "imagem": "https://m.media-amazon.com/images/I/71MFNdnQjwL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            "title": "Data Mining Methods and Models",
+            "year": 2006,
+            "genre": "Data Analytics",
+            "Author": "Daniel T. Larose",
+            "imagem": "https://m.media-amazon.com/images/I/71oTpdbG4AL._AC_UF1000,1000_QL80_.jpg"
+        },
+        {
+            "title": "The Art of Data Science",
+            "year": 2016,
+            "genre": "Data Analytics",
+            "Author": "Roger Peng, Elizabeth Matsui",
+            "imagem": "https://www.hertiecodingclub.com/material/Books/art_ds/images/book.jpg"
+        }
+]
