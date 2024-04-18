@@ -24,7 +24,18 @@ app.get('/buscarLivrosPorTitulos/:title', (req, res)=>{
     else{
         res.status(404).send('Livro não encontrado');
     }
-
 });
 
-app.listen(8000)
+app.post('/login', async (req, res)=>{
+    const {name, password} = req.body;
+    const resultado = await usersServices.validateLogin(name, password);
+
+    if(resultado){
+        res.status(200).send('Login efetuado com sucesso');
+    }
+    else{
+        res.status(401).send('Usuário ou senha inválidos');
+    }
+});
+
+app.listen(8000);
