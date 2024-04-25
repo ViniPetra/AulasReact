@@ -47,7 +47,7 @@ const Cadastro = () => {
   return (
     <div>
       <h1>Cadastro</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Nome: </label>
           <input 
               type="text"
