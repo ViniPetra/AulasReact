@@ -38,4 +38,16 @@ app.post('/login', async (req, res)=>{
     }
 });
 
+app.post('/addUsers', async (req, res)=>{
+    const {name, password} = req.body;
+    const resultado = await usersServices.addUsers(name, password);
+
+    if(resultado){
+        res.status(201).send('Usuário cadastrado com sucesso');
+    }
+    else{
+        res.status(400).send('Usuário já cadastrado');
+    }
+});
+
 app.listen(8000);
