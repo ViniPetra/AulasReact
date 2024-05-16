@@ -4,14 +4,14 @@ import { Subtitulo, Titulo } from "../styles/Texts";
 import { Container, Card } from "../styles/Containers";
 
 const MaisBuscados = () => {
-    const [livros, setLivros] = useState([]);
+    const [gnomos, setGnomos] = useState([]);
     useEffect(() => {
         const maisBuscados = async () => {
             try{
-                const response =  await fetch('http://localhost:8000/livros');
+                const response =  await fetch('http://localhost:8000/gnomos');
                 const data = await response.json();
                 console.log(data);
-                setLivros(data);
+                setGnomos(data);
 
             } catch(error){
                 console.log(error)
@@ -24,12 +24,12 @@ const MaisBuscados = () => {
     return (
         <Container>
             {
-                livros.map((livro) => {
+                gnomos.map((gnomo) => {
                     return (
                         <Card>
-                            <Titulo> {livro.title} </Titulo>
-                            <ImagemGnomo src={livro.imagem} alt={livro.title}/>
-                            <Subtitulo color = "dark-gray"> {livro.year} </Subtitulo>
+                            <Titulo> {gnomo.title} </Titulo>
+                            <ImagemGnomo src={gnomo.imagem} alt={gnomo.title}/>
+                            <Subtitulo color = "dark-gray"> {gnomo.year} </Subtitulo>
                         </Card>
                     )
                 })
