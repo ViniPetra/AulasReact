@@ -24,6 +24,12 @@ function App() {
           }
         />
         <Route
+        path="/sobre"
+        element={<>
+        </>
+        }
+      />
+        <Route
           path="/cadastro"
           element={<>
           <Cadastro />

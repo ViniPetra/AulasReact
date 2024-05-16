@@ -24,4 +24,17 @@ export const Card = styled.div`
     align-items: center;
     `;
 
+export const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  `;
 

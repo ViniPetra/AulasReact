@@ -4,6 +4,7 @@ export const Titulo = styled.h1`
   font-size: ${props => props.size || "32px"};
   color: ${props => props.color || "dark-gray"};
   line-weight: ${props => props.weight || "1.5rem"};
+  font-family: 'MedievalSharp', cursive;
   `;
 
 export const Subtitulo = styled.h2`
@@ -17,6 +18,7 @@ export const Texto = styled.p`
     color: ${props => props.color || "black"};
     line-weight: ${props => props.weight || "1.5rem"};
     font-weight: 400;
+    font-family: 'MedievalSharp', cursive;
     `;
 
 export const Input = styled.input`
