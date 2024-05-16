@@ -1,15 +1,14 @@
-//chamando o pacote que eu instalei para dentro
-//do meu projeto para poder usá-lo
+
 const express = require('express');
 const gnomosImportados = require('./services/gnomoServices');
+const usersServices = require('./services/usersServices');
 const cors = require('cors');
 
-//crio uum objeto app para recer todas as funções do express
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 
-//callback => função que é passada como parâmetro para ser executada
 app.get('/gnomos', (req, res)=>{
     res.status(200).json(gnomosImportados.buscarGnomos())
 });
@@ -28,7 +27,7 @@ app.get('/buscarGnomosPorElemento/:elemento', (req, res)=>{
 
 app.post('/login', async (req, res)=>{
     const {name, password} = req.body;
-    const resultado = await usersServices.validateLogin(name, password);
+    const resultado = await usersServices.logar(name, password);
 
     if(resultado){
         res.status(200).send('Login efetuado com sucesso');
@@ -38,9 +37,9 @@ app.post('/login', async (req, res)=>{
     }
 });
 
-app.post('/addUsers', async (req, res)=>{
+app.post('/cadastrar', async (req, res)=>{
     const {name, password} = req.body;
-    const resultado = await usersServices.addUsers(name, password);
+    const resultado = usersServices.cadastrar(name, password);
 
     if(resultado){
         res.status(201).send('Usuário cadastrado com sucesso');

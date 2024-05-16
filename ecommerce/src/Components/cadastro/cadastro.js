@@ -5,32 +5,48 @@ import { Titulo} from "../styles/Texts";
 import { Container} from "../styles/Containers"
 
 const Cadastro = () => {
-  const [formData, setFormData] = useState({ name: '', password: '' });
-  const [feedback, setFeedback] = useState({ message: '', type: '' });
+  const [formData, setFormData] = useState({
+    name: "",
+    password: ""
+  });
+
+  const [feedback, setFeedback] = useState({
+    message: "",
+    type: ""
+  });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
+    const {name, value} = e.target;
+    setFormData(prevState => ({...prevState, [name]:value}))
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      // Simulando uma requisição de cadastro
-      // Aqui você faria a chamada para a API de cadastro
-      // e lidaria com a resposta
-      if (formData.name && formData.password) {
-        setFeedback({ message: 'Cadastro bem-sucedido!', type: 'success' });
+    if (!formData.name || !formData.password) {
+      setFeedback({
+        message: "Por favor, preencha todos os campos.",
+        type: "warning"
+      });
+      return; 
+    }
+    try{
+      const response = await fetch("http://localhost:8000/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+      if (response.ok) {
+        setFeedback({ message: "Cadastro realizado com sucesso", type: "success" });
       } else {
-        setFeedback({ message: 'Preencha todos os campos!', type: 'error' });
+        const error = await response.json();
+        setFeedback({ message: error.message || "Erro no cadastro", type: "error" });
       }
-      // Limpando os dados do formulário
-      setFormData({ name: '', password: '' });
+      setFormData({ name: "", password: "" });
     } catch (error) {
-      setFeedback({ message: error.message, type: 'error' });
+      console.error(error);
+      setFeedback({ message: "Erro ao conectar com o servidor", type: "error" });
     }
   }
 
