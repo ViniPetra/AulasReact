@@ -1,14 +1,22 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-    width: 100px;
-    height: 30px;
-    padding: 8px;
-    background-color: white;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    `;
+  width: 120px;
+  height: 40px;
+  padding: 8px 16px;
+  background-color: rgb(244, 206, 179);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgb(162, 76, 56);
+  }
+`;
 
     export const Botao = styled.button`
     background-color: rgb(244, 206, 179);

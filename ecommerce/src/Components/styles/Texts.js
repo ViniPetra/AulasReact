@@ -5,6 +5,7 @@ export const Titulo = styled.h1`
   color: ${props => props.color || "dark-gray"};
   line-weight: ${props => props.weight || "1.5rem"};
   font-family: 'MedievalSharp', cursive;
+  margin-bottom: 8px;
   `;
 
 export const Subtitulo = styled.h2`
@@ -19,18 +20,21 @@ export const Texto = styled.p`
     line-weight: ${props => props.weight || "1.5rem"};
     font-weight: 400;
     font-family: 'MedievalSharp', cursive;
+    margin-bottom: 16px;
     `;
 
 export const Input = styled.input`
-    width: 600px;
-    height: 30px;
-    border-radius: 5px;
-    border: 1px solid black;
-    padding: 8px
-    background-color: #fff;
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    `;
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+`;
 
 
 

@@ -6,6 +6,7 @@ import Pesquisa from "./Components/pesquisa/Pesquisa";
 import { Route, Routes } from "react-router-dom";
 import Cadastro from "./Components/cadastro/cadastro";
 import Login from "./Components/login/login";
+import Sobre from "./Components/sobre/sobre";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route
         path="/sobre"
         element={<>
+        <Sobre />
         </>
         }
       />

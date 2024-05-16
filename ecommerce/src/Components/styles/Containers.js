@@ -14,7 +14,7 @@ export const Container = styled.div`
     flex-direction: ${props => props.direction || 'row'};
     width: 100%;
     justify-content: center;
-    gap: 24px;
+    gap: 16px;
     align-items: center;
     `;
 
