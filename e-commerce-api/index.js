@@ -25,27 +25,35 @@ app.get('/buscarGnomosPorElemento/:elemento', (req, res)=>{
     }
 });
 
-app.post('/login', async (req, res)=>{
-    const {name, password} = req.body;
-    const resultado = await usersServices.logar(name, password);
+app.post('/login', async (req, res) => {
+    const { name, password } = req.body;
+    try {
+        const result = await usersServices.logar(name, password);
 
-    if(resultado){
-        res.status(200).send('Login efetuado com sucesso');
-    }
-    else{
-        res.status(401).send('Usuário ou senha inválidos');
+        if (result) {
+            res.status(200).json({ message: 'Login efetuado com sucesso' });
+        } else {
+            res.status(401).json({ message: 'Usuário ou senha inválidos' });
+        }
+    } catch (error) {
+        console.error(`Erro ao processar o login: ${error.message}`);
+        res.status(500).json({ message: 'Erro ao processar o login' });
     }
 });
 
-app.post('/cadastrar', async (req, res)=>{
-    const {name, password} = req.body;
-    const resultado = usersServices.cadastrar(name, password);
+app.post('/cadastrar', async (req, res) => {
+    const { name, password } = req.body;
+    try {
+        const result = await usersServices.cadastrar(name, password);
 
-    if(resultado){
-        res.status(201).send('Usuário cadastrado com sucesso');
-    }
-    else{
-        res.status(400).send('Usuário já cadastrado');
+        if (result) {
+            res.status(201).json({ message: 'Usuário cadastrado com sucesso' });
+        } else {
+            res.status(400).json({ message: 'Usuário já cadastrado' });
+        }
+    } catch (error) {
+        console.error(`Erro ao processar o cadastro: ${error.message}`);
+        res.status(500).json({ message: 'Erro ao processar o cadastro' });
     }
 });
 
