@@ -31,7 +31,7 @@ const Pesquisa = () => {
                 />
                 <Button onClick={handleSubmit}>Pesquisar</Button>
             </Wrapper>
-            <Resultado livros={gnomos}/>
+            <Resultado gnomos={gnomos}/>
                 
         </Container>
     )

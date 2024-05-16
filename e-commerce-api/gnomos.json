@@ -1,0 +1,35 @@
+[
+    {
+        "nome": "Glimmer",
+        "elemento": "Fogo",
+        "preço": 15000,
+        "especialidade": "Forja",
+        "imagem": "https://i.ibb.co/g6rZH1w/gnomo-fogo.png",
+        "descrição": "Glimmer é um gnomo ardente com uma paixão pela forja. Suas chamas internas permitem-lhe moldar metais com precisão e habilidade, criando armas e armaduras que são tanto belas quanto funcionais. Com uma personalidade calorosa, Glimmer ilumina qualquer ambiente com seu espírito vibrante e determinação inabalável."
+    },
+    {
+        "nome": "Aqualin",
+        "elemento": "Água",
+        "preço": 12000,
+        "especialidade": "Pesca",
+        "imagem": "https://i.ibb.co/sbcb3RF/gnomo-agua.png",
+        "descrição": "Aqualin é um gnomo sereno e sábio, mestre na arte da pesca. Ele conhece todos os segredos dos rios e lagos, sendo capaz de capturar os peixes mais raros e valiosos. Aqualin tem uma natureza tranquila e gentil, sempre pronto para ajudar os necessitados com seu conhecimento profundo das águas."
+    },
+    {
+        "nome": "Terran",
+        "elemento": "Terra",
+        "preço": 18000,
+        "especialidade": "Agricultura",
+        "imagem": "https://i.ibb.co/TTws1hP/gnomo-terra.png",
+        "descrição": "Terran é um gnomo robusto e trabalhador, profundamente conectado com a terra. Ele possui um dom especial para a agricultura, capaz de fazer qualquer planta crescer com saúde e vigor. Terran é um protetor da natureza e um aliado valioso na colheita e cultivo de alimentos."
+    },
+    {
+        "nome": "Aero",
+        "elemento": "Ar",
+        "preço": 26000,
+        "especialidade": "Controle do Clima",
+        "imagem": "https://i.ibb.co/rmTmJtB/gnomo-ar.png",
+        "descrição": "Aero é um gnomo leve e ágil, com uma conexão única com os ventos. Ele pode prever mudanças climáticas com precisão e controlar o clima, ajustando a temperatura para quente ou frio conforme necessário. Aero é espirituoso e curioso, sempre explorando novas correntes de ar e aprendendo com os céus."
+    }
+]
+

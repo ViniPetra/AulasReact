@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { ImagemGnomo } from "../styles/Imagens";
-import { Subtitulo, Titulo } from "../styles/Texts";
+import { Subtitulo, Titulo, Preco, DescricaoPequena, Texto } from "../styles/Texts";
 import { Container, Card } from "../styles/Containers";
+
 
 const MaisBuscados = () => {
     const [gnomos, setGnomos] = useState([]);
@@ -23,17 +24,16 @@ const MaisBuscados = () => {
 
     return (
         <Container>
-            {
-                gnomos.map((gnomo) => {
-                    return (
-                        <Card>
-                            <Titulo> {gnomo.title} </Titulo>
-                            <ImagemGnomo src={gnomo.imagem} alt={gnomo.title}/>
-                            <Subtitulo color = "dark-gray"> {gnomo.year} </Subtitulo>
-                        </Card>
-                    )
-                })
-            }
+            {gnomos.map((gnomo) => (
+                <Card key={gnomo.nome}>
+                    <Titulo>{gnomo.nome}</Titulo>
+                    <ImagemGnomo src={gnomo.imagem} alt={`Imagem do gnomo ${gnomo.nome}`} />
+                    <Subtitulo>Elemento: {gnomo.elemento}</Subtitulo>
+                    <Preco>Preço: R${gnomo.preço.toLocaleString()}</Preco>
+                    <DescricaoPequena>{gnomo.descrição}</DescricaoPequena>
+                    <Texto>Especialidade: {gnomo.especialidade}</Texto>
+                </Card>
+            ))}
         </Container>
     );
 

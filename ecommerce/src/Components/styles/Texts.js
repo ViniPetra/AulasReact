@@ -36,6 +36,17 @@ export const Input = styled.input`
   box-sizing: border-box;
 `;
 
+export const Preco = styled.p`
+  font-size: 18px;
+  color: #e67e22;
+  margin: 8px 0 16px 0;
+`;
+
+export const DescricaoPequena = styled.p`
+  font-size: 10px;
+  color: #666;
+  margin: 8px 0;
+`;
 
 
 

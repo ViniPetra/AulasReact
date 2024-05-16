@@ -18,11 +18,18 @@ export const Container = styled.div`
     align-items: center;
     `;
 
+
 export const Card = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    `;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.05);
+  }
+`;
 
 export const Wrapper = styled.div`
     display: flex;
